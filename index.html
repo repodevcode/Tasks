@@ -7,42 +7,128 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Tasks<h1>
+    <h1>Tasks</h1>
+    
+<p><span id='date-time'></span>.</p>
     <button onclick="newTask()">New Task</button>
 <input type="button" value="Reset" onClick="document.location.reload(true)">
+<button onclick="quotes()"> Quotes</button>
+
+<button onclick="done()"> Done!</button>
+
+
+
 
     <br>
-    <input id="w" type="checkbox" name="width"  placeholder="Task 4">
-    <input id="w" type="text" name="width"  placeholder="Task 1">
     <br>
-    <input id="w" type="checkbox" name="width"  placeholder="Task 4">
-    <input id="w" type="text" name="width"  placeholder="Task 2">
-    <br>
-    <input id="w" type="checkbox" name="width"  placeholder="Task 4">
-    <input id="w" type="text" name="width"  placeholder="Task 3">
-    <br>
-    <input id="w" type="checkbox" name="width"  placeholder="Task 4">
-    <input id="w" type="text" name="width"  placeholder="Task 4">
-    <br>
-    <input id="w" type="checkbox" name="width"  placeholder="Task 4">
-    <input id="w" type="text" name="width"  placeholder="Task 5">
-    <br>
-    <input id="w" type="checkbox" name="width"  placeholder="Task 4">
-    <input id="w" type="text" name="width"  placeholder="Task 6">
-    <br>
-    <input id="w" type="checkbox" name="width"  placeholder="Task 4">
-    <input id="w" type="text" name="width"  placeholder="Task 7">
-    <br>
-    <input id="w" type="checkbox" name="width"  placeholder="Task 4">
-    <input id="w" type="text" name="width"  placeholder="Task 8">
-    <br>
-    <input id="w" type="checkbox" name="width"  placeholder="Task 4">
-    <input id="w" type="text" name="width"  placeholder="Task 9">
-    <br>
-    <input id="w" type="checkbox" name="width"  placeholder="Task 4">
-    <input id="w" type="text" name="width"  placeholder="Task 10">
+    <input id="w" type="checkbox" name="width"  placeholder="Task">
+    <input id="w" type="text" name="width"  placeholder="Task">
+    <input id="w" type="text" name="width"  placeholder="Details">
+    <input id="w" type="text" name="width"  placeholder="Label"> 
+    <input id="w" type="file" name="width"  placeholder="Label"> 
+
     
-    
+   
+
+        <input id="w" type="date" name="width"  placeholder="Task">
+         
+        <input type= "color" value="#34c9eb">
+    <br>
+    <br>
+    <input id="w" type="checkbox" name="width"  placeholder="Task">
+    <input id="w" type="text" name="width"  placeholder="Task">
+    <input id="w" type="text" name="width"  placeholder="Details"> 
+    <input id="w" type="text" name="width"  placeholder="Label"> 
+        <input id="w" type="date" name="width"  placeholder="Task">
+<input type= "color" value="#34c9eb">
+   
+    <br>
+    <br>
+    <input id="w" type="checkbox" name="width"  placeholder="Task
+     4">
+    <input id="w" type="text" name="width"  placeholder="Task">
+    <input id="w" type="text" name="width"  placeholder="Details"> 
+    <input id="w" type="text" name="width"  placeholder="Label">
+     
+        <input id="w" type="date" name="width"  placeholder="Task">
+<input type= "color" value="#34c9eb">
+    <br>
+    <br>
+    <input id="w" type="checkbox" name="width"  placeholder="Task">
+    <input id="w" type="text" name="width"  placeholder="Task">
+    <input id="w" type="text" name="width"  placeholder="Details"> 
+    <input id="w" type="text" name="width"  placeholder="Label"> 
+        <input id="w" type="date" name="width"  placeholder="Task">
+        <input type= "color" value="#34c9eb">
+    <br>
+    <br>
+                                              
+     <script>
+      
+
+      // var box = document.createElement("input");
+
+     var dt = new Date();
+document.getElementById('date-time').innerHTML=dt;
+
+      function colorCodeOn(){
+          newColor = document.createElement("input");
+        newColor.setAttribute("type", "color");
+        newColor.setAttribute("value", "#34c9eb");
+        document.body.appendChild(newColor);
+      }
+      function quotes(){
+        alert("Quote1: Stay positive better days are on there way. Quote2: May your troubles be less and your blessings be more.");
+        prompt("Better?");
+      }
+      function done(){
+        alert("Congradulations! You finished all your tasks. Have fun and dont worry about anything!");
+        document.location.href = 'https://docs.google.com/presentation/d/1IrpLqS-52T1ih7AEy6F07g4zKxhz1_1azSyqVwE4Jf4/edit#slide=id.gdbface82a7_0_46'
+        
+
+        
+
+
+      }
+      function newTask() {
+
+        const text = document.createElement("div");
+        text.innerHTML = "<br />";
+        document.body.appendChild(text);
+
+        newInput = document.createElement("input");
+        newInput.setAttribute("type", "checkbox");
+        document.body.appendChild(newInput);
+
+        newInput = document.createElement("input");
+        newInput.setAttribute("type", "text");
+        newInput.setAttribute("placeholder", "Task");
+        document.body.appendChild(newInput);
+
+        newInput = document.createElement("input");
+        newInput.setAttribute("type", "text");
+        newInput.setAttribute("placeholder", "Details");
+        document.body.appendChild(newInput);
+
+        newInput = document.createElement("input");
+        newInput.setAttribute("type", "text");
+        newInput.setAttribute("placeholder", "Label");
+        document.body.appendChild(newInput);
+
+         newInput = document.createElement("input");
+        newInput.setAttribute("type", "date");
+        document.body.appendChild(newInput);
+
+        newInput = document.createElement("input");
+        newInput.setAttribute("type", "color");
+        newInput.setAttribute("value", "#34c9eb");
+        document.body.appendChild(newInput);
+      }
+
+
+
+    </script>
+ 
   </body>
-  <script src="script.js"></script>
+  
 </html>
